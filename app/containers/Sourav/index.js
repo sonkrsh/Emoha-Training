@@ -51,10 +51,11 @@ export function Sourav({ handleSubmit }) {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
+    <h1>Hello</h1>
         <Form.Item
           label="Username"
           name="username"
-          rules={[{ required: true, message: 'Please input your username or Name!' }]}
+          rules={[{ required: true, message: 'Please input your username!' }]}
         >
           <Input placeholder="hello" />
         </Form.Item>
