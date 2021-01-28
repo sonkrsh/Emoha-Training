@@ -16,6 +16,7 @@ import 'antd/dist/antd.css';
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 import { Form, Input, Button, Checkbox } from 'antd';
+import { Helmet } from 'react-helmet';
 import makeSelectSourav from './selectors';
 import reducer from './reducer';
 import saga from './saga';
@@ -49,6 +50,9 @@ export function Sourav({ sourav, handleSubmit }) {
   console.log(sourav);
   return (
     <div>
+      <Helmet titleTemplate="sourav" defaultTitle="Sourav">
+        <meta name="description" content="A React.js Boilerplate application" />
+      </Helmet>
       <Form
         {...layout}
         name="basic"
