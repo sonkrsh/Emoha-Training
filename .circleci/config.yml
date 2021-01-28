@@ -8,7 +8,6 @@ orbs:
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   
   node: circleci/node@4.1
-  heroku: circleci/heroku@0.0.10
   
 
 
@@ -40,13 +39,6 @@ workflows:
   # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
   # CircleCI will run this workflow on every commit.
   # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
-  heroku_deploy:
-    jobs:
-      - heroku/deploy-via-git:
-          post-steps:
-            - run: your-database-migration-command
-          pre-steps:
-            - run: command-that-run-before-deploying
 
   sample: 
     jobs:
