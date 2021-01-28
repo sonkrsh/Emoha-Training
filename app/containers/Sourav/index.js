@@ -40,7 +40,7 @@ export function Sourav({ handleSubmit }) {
 
   const onFinishFailed = () => {};
 
-  //  console.log(sourav);
+  // console.log(sourav);
   return (
     <div>
       <Helmet titleTemplate="sourav" defaultTitle="Sourav">
@@ -90,6 +90,7 @@ Sourav.propTypes = {
 Sourav.propTypes = {
   handleSubmit: PropTypes.array.isRequired,
 };
+
 const mapStateToProps = createStructuredSelector({
   sourav: makeSelectSourav(),
 });
