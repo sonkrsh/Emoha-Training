@@ -33,18 +33,9 @@ jobs:
       #     pkg-manager: yarn 
       - run:
           name: Run tests
-          command: npm run build
+          command: npm run build   heroku/deploy-via-git
 
 workflows:
-  heroku_deploy:
-    jobs:
-      - build
-      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
-          requires:
-            - build
-          filters:
-            branches:
-              only: sequential-branch-filter
   sample: 
     jobs:
       - build-and-test
