@@ -37,7 +37,7 @@ jobs:
 deployment:
   staging:
     branch: master
-    Heroku: 
+    heroku: 
       appname: emoha-learning
 
 
