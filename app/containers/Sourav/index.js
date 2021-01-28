@@ -22,7 +22,7 @@ import saga from './saga';
 
 import { formValueSubmit } from './actions';
 
-export function Sourav() {
+export function Sourav({ handleSubmit }) {
   useInjectReducer({ key: 'sourav', reducer });
   useInjectSaga({ key: 'sourav', saga });
 
@@ -33,14 +33,14 @@ export function Sourav() {
   const tailLayout = {
     wrapperCol: { offset: 8, span: 16 },
   };
-  const handleSubmit = () => {};
+
   const onFinish = values => {
     handleSubmit(values);
   };
 
   const onFinishFailed = () => {};
 
-  // console.log(sourav);
+  //  console.log(sourav);
   return (
     <div>
       <Helmet titleTemplate="sourav" defaultTitle="Sourav">
@@ -87,6 +87,9 @@ Sourav.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
+Sourav.propTypes = {
+  handleSubmit: PropTypes.array.isRequired,
+};
 const mapStateToProps = createStructuredSelector({
   sourav: makeSelectSourav(),
 });
