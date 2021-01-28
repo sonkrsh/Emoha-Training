@@ -5,10 +5,10 @@
  */
 /* import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap'; */
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { FormattedMessage } from 'react-intl';
+
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import 'antd/dist/antd.css';
@@ -19,10 +19,10 @@ import { Helmet } from 'react-helmet';
 import makeSelectSourav from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import messages from './messages';
+
 import { formValueSubmit } from './actions';
 
-export function Sourav({ sourav, handleSubmit }) {
+export function Sourav() {
   useInjectReducer({ key: 'sourav', reducer });
   useInjectSaga({ key: 'sourav', saga });
 
@@ -33,14 +33,14 @@ export function Sourav({ sourav, handleSubmit }) {
   const tailLayout = {
     wrapperCol: { offset: 8, span: 16 },
   };
+  const handleSubmit = () => {};
   const onFinish = values => {
     handleSubmit(values);
   };
 
-  const onFinishFailed = errorInfo => {
-  };
+  const onFinishFailed = () => {};
 
-  console.log(sourav);
+  // console.log(sourav);
   return (
     <div>
       <Helmet titleTemplate="sourav" defaultTitle="Sourav">
