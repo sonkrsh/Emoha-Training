@@ -32,11 +32,6 @@ jobs:
       - run:
           name: Run tests
           command: npm run build
-          deployment:
-            staging:
-              branch: master
-              heroku:
-                appname: emoha-learning
 
 workflows:
   # Below is the definition of your workflow.
