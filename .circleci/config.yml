@@ -47,4 +47,4 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: emoha-learnin
+      appname: emoha-learning
