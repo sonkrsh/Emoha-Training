@@ -4,7 +4,6 @@ import { selectSouravDomain } from './selectors';
 
 function* myApiData() {
   yield select(selectSouravDomain);
-  console.log('we');
 }
 // Individual exports for testing
 export default function* souravSaga() {
