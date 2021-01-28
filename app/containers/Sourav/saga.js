@@ -4,10 +4,6 @@ import {selectSouravDomain} from './selectors';
 
 function* myApiData(payload) {
   const formData = yield select(selectSouravDomain);
-  console.log(formData.data.username)
-  console.log(formData.data.password)
-  /* console.log(payload.formvalue.username);
-  console.log(payload.formvalue.password); */
 }
 // Individual exports for testing
 export default function* souravSaga() {

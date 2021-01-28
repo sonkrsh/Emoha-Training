@@ -35,18 +35,12 @@ export function Sourav({ sourav, handleSubmit }) {
     wrapperCol: { offset: 8, span: 16 },
   };
   const onFinish = values => {
-    console.log('Success:', values);
     handleSubmit(values);
   };
 
   const onFinishFailed = errorInfo => {
-    console.log('Failed:', errorInfo);
   };
-  /* const handleSubmit=(e)=>{
-    e.preventDefault()
-   dispatch(formValueSubmit('sourav'))
-    console.log(data)
-  } */
+
   console.log(sourav);
   return (
     <div>
@@ -100,10 +94,8 @@ const mapStateToProps = createStructuredSelector({
 
 function mapDispatchToProps(dispatch) {
   return {
-    // handleSubmit: evt => dispatch(formValueSubmit('sourav')),
     handleSubmit: evt => {
       dispatch(formValueSubmit(evt));
-      // console.log(userName)
     },
   };
 }
