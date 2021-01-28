@@ -39,8 +39,6 @@ export function Sourav({ handleSubmit }) {
   };
 
   const onFinishFailed = () => {};
-
-  // console.log(sourav);
   return (
     <div>
       <Helmet titleTemplate="sourav" defaultTitle="Sourav">
