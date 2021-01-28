@@ -1,9 +1,9 @@
-import { take, call, put, select, takeLatest } from 'redux-saga/effects';
+import { select, takeLatest } from 'redux-saga/effects';
 import { DEFAULT_ACTION } from './constants';
-import {selectSouravDomain} from './selectors';
+import { selectSouravDomain } from './selectors';
 
-function* myApiData(payload) {
-  const formData = yield select(selectSouravDomain);
+function* myApiData() {
+  yield select(selectSouravDomain);
 }
 // Individual exports for testing
 export default function* souravSaga() {
