@@ -32,14 +32,11 @@ jobs:
       #     pkg-manager: yarn 
       - run:
           name: Run tests
-          command: npm run build
-          
-deployment:
-  staging:
-    branch: master
-    heroku: 
-      appname: emoha-learning
+          command: |
+                  npm run build
+                  git push https://heroku:$HEROKU_API_KEY@git.heroku.com/emoha-learning.git ${CIRCLE_BRANCH}:master
 
+  
 
 workflows:
   sample: 
